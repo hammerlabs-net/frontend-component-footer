@@ -39,9 +39,9 @@ class SiteFooter extends React.Component {
       onLanguageSelected,
       logo,
       intl,
+      config,
     } = this.props;
     const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
-    const { config } = this.context;
 
     return (
       <footer
@@ -83,6 +83,7 @@ SiteFooter.propTypes = {
     label: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
   })),
+  config: PropTypes.object.isRequired,
 };
 
 SiteFooter.defaultProps = {

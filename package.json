@@ -1,18 +1,32 @@
 {
   "name": "@edx/frontend-component-footer",
-  "version": "1.0.0-semantically-released",
+  "version": "1.0.0",
   "description": "Footer component for use when building Open edX frontend applications",
   "main": "dist/index.js",
   "publishConfig": {
     "access": "public"
   },
+  "keywords": [
+    "pilet"
+  ],
   "scripts": {
-    "build": "make build",
+    "build": "pilet build",
+    "start": "pilet debug",
+    "upgrade": "pilet upgrade",
     "i18n_extract": "BABEL_ENV=i18n fedx-scripts babel src --quiet > /dev/null",
     "lint": "fedx-scripts eslint --ext .js --ext .jsx .",
     "snapshot": "fedx-scripts jest --updateSnapshot",
-    "start": "fedx-scripts webpack-dev-server --progress",
     "test": "fedx-scripts jest --coverage"
+  },
+  "source": "./src/index.jsx",
+  "piral": {
+    "name": "my-app-shell"
+  },
+  "importmap": {
+    "imports": {},
+    "inherit": [
+      "frontend-app-shell"
+    ]
   },
   "files": [
     "/dist"
@@ -35,33 +49,38 @@
   "devDependencies": {
     "@edx/brand": "npm:@edx/brand-openedx@1.2.0",
     "@edx/browserslist-config": "^1.1.1",
-    "@edx/frontend-build": "12.8.54",
-    "@edx/frontend-platform": "4.5.1",
-    "@edx/paragon": "^20.19.0",
+    "@edx/frontend-build": "file:../frontend-build",
+    "@edx/frontend-platform": "file:../frontend-platform/dist",
+    "@edx/paragon": "file:../paragon",
     "@edx/reactifex": "^2.1.1",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.7",
+    "frontend-app-shell": "file:../frontend-app-shell/dist/emulator/frontend-app-shell-1.0.0.tgz",
     "husky": "8.0.3",
-    "prop-types": "15.8.1",
-    "react": "16.14.0",
-    "react-dom": "16.14.0",
+    "piral-cli": "1.0.1",
+    "piral-cli-webpack5": "1.0.1",
+    "react": "^16.9.0 || ^17.0.0",
+    "react-dom": "^16.9.0 || ^17.0.0",
     "react-redux": "7.2.9",
     "react-router-dom": "5.3.4",
     "react-test-renderer": "16.14.0",
     "redux": "4.2.1",
-    "semantic-release": "21.0.5"
+    "semantic-release": "21.0.5",
+    "tslib": "2.3.1"
   },
   "dependencies": {
+    "@edx/frontend-platform": "file:../frontend-platform/dist",
     "@fortawesome/fontawesome-svg-core": "6.4.0",
     "@fortawesome/free-brands-svg-icons": "6.4.0",
     "@fortawesome/free-regular-svg-icons": "6.4.0",
     "@fortawesome/free-solid-svg-icons": "6.4.0",
-    "@fortawesome/react-fontawesome": "0.2.0"
+    "@fortawesome/react-fontawesome": "0.2.0",
+    "prop-types": "15.8.1"
   },
   "peerDependencies": {
-    "@edx/frontend-platform": "^4.0.0",
-    "prop-types": "^15.5.10",
+    "@edx/brand": "npm:@edx/brand-openedx@1.2.0",
     "react": "^16.9.0 || ^17.0.0",
-    "react-dom": "^16.9.0 || ^17.0.0"
+    "react-dom": "^16.9.0 || ^17.0.0",
+    "react-router-dom": "5.3.4"
   }
 }
