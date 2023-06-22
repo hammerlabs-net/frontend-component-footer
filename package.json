@@ -20,7 +20,7 @@
   },
   "source": "./src/index.jsx",
   "piral": {
-    "name": "my-app-shell"
+    "name": "frontend-app-shell"
   },
   "importmap": {
     "imports": {},

@@ -83,6 +83,7 @@ SiteFooter.propTypes = {
     label: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
   })),
+  // eslint-disable-next-line react/forbid-prop-types
   config: PropTypes.object.isRequired,
 };
 
