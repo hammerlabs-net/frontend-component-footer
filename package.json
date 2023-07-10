@@ -1,6 +1,6 @@
 {
   "name": "@edx/frontend-component-footer",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha",
   "description": "Footer component for use when building Open edX frontend applications",
   "main": "dist/index.js",
   "publishConfig": {
@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/openedx/frontend-component-footer#readme",
   "devDependencies": {
-    "@edx/frontend-build": "file:../frontend-build",
+    "@edx/frontend-build": "npm:@hammerlabs-net/frontend-build@1.0.0-alpha",
     "@edx/reactifex": "^2.1.1",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.7",
@@ -65,9 +65,9 @@
   },
   "peerDependencies": {
     "@edx/browserslist-config": "^1.1.1",
-    "@edx/frontend-platform": "file:../frontend-platform/dist",
+    "@edx/frontend-platform": "npm:@hammerlabs-net/frontend-platform@1.0.0-alpha",
+    "@edx/paragon": "npm:@hammerlabs-net/paragon@1.0.0-alpha",
     "@edx/brand": "npm:@edx/brand-openedx@1.2.0",
-    "@edx/paragon": "file:../paragon",
     "react": "^16.14.0 || ^17.0.0",
     "react-dom": "^16.14.0 || ^17.0.0",
     "react-router-dom": "5.3.4"
