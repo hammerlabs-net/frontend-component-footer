@@ -10,3 +10,5 @@ src/i18n/transifex_input.json
 temp/babel-plugin-react-intl
 /.vscode
 module.config.js
+.piralrc
+**/edx-frontend-component-footer*.tgz
